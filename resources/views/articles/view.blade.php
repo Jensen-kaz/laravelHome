@@ -11,7 +11,8 @@
     @foreach($article->comments as $comment)
         <div class="comment-body">
             <div class="comment-author">
-                {{$comment->author['name']}}
+
+                {{$comment->author->name}}
             </div>
             <div class="comment-text">
                 {{$comment->text}}
@@ -24,7 +25,8 @@
 //    echo Form::label('commentText', 'Комментарий') . Form::text('commentText', Input::old('commentText'));
 //    echo Form::submit('Оставить комментарий');
 //    ?>
-    <form method="POST" action="comments/create">
+    <form method="POST" action="{{route('comment-add')}}">
+        {{csrf_field()}}
         <input id="commentText" type="text" name="commentText">
         <button type="submit">
             Оставить комментарий

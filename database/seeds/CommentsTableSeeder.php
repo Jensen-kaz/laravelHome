@@ -17,8 +17,8 @@ class CommentsTableSeeder extends Seeder
         for ($i = 1; $i < 11; $i++) {
             DB::table('comments')->insert([
                 'text' => 'Текст '. $i . '',
-                'articleId' =>  $i,
-                'userId' => rand(5, 14),
+                'article_id' =>  $i,
+                'user_id' => rand(5, 14),
             ]);
         }
     }

@@ -16,7 +16,7 @@ class Articles extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('text');
+            $table->text('text');
         });
 
     }

@@ -27,21 +27,22 @@ class CommentsController extends Controller
         return view('articles.view')->withArticle($article);
     }
 
-    public function create() {
+    public function create(Request $request) {
 
-        $param = Request::all();
-        var_dump($param);
+        $param = $request->all();
+
 
         $user = new User;
-        $user->name = Str::random(32, 'alpha');
-        $user->email = Str::random(32, 'alpha') . '@mail.ru';
+
+        $user->name = \Str::random(32, 'alpha');
+        $user->email = \Str::random(32, 'alpha') . '@mail.ru';
         $user->password = 'qwerty';
         $user->save();
 
         $comment = new Comment;
-        $comment->text = Str::random(32, 'alpha');
-        $comment->email = Str::random(32, 'alpha') . '@mail.ru';
-        $comment->password = 'qwerty';
+        $comment->text = \Str::random(32, 'alpha');
+        $comment->article_id = 1;
+        $comment->user_id = 1;
         $comment->save();
     }
 }

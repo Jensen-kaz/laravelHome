@@ -12,6 +12,8 @@ class ArticlesTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('articles')->truncate();
+
         for ($i = 1; $i < 11; $i++) {
             DB::table('articles')->insert([
                 'name' => 'Статья ' . $i . '',

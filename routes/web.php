@@ -18,7 +18,7 @@ Route::get('/', function () {
 Route::get('/articles', 'ArticlesController@index');
 Route::get('/articles/view/{id}', 'ArticlesController@view');
 Route::get('/comments', 'CommentsController@index');
-Route::get('/comments/create', 'CommentsController@create');
+Route::post('/comments/create', 'CommentsController@create')->name('comment-add');
 
 Auth::routes();
 

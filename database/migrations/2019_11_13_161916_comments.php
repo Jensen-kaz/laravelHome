@@ -17,7 +17,7 @@ class Comments extends Migration
            $table->bigIncrements('id');
            $table->string('text');
            $table->integer('article_id');
-           $table->integer('userId');
+           $table->integer('user_id');
         });
     }
 
