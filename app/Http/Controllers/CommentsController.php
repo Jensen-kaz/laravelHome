@@ -6,6 +6,8 @@ use App\Models\Comment;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 
 class CommentsController extends Controller
@@ -13,12 +15,8 @@ class CommentsController extends Controller
     public function index() {
 
         $comments = Comment::all();
-//        foreach ($articles as $value) {
-//            $buttonNames[] = $value->name;
-//        }
         $title = 'Комментарии';
 
-        //$articlesOut = ['articles' => $articles, 'title' => $title];
         return view('comments.index')->withTitle($title)->withComments($comments);
     }
 
@@ -30,19 +28,17 @@ class CommentsController extends Controller
     public function create(Request $request) {
 
         $param = $request->all();
+        if (Auth::check()) {
+            $user = Auth::user();
+            $comment = new Comment;
+            $comment->text = $param['commentText'];
+            $comment->article_id = $param['articleId'];
+            $comment->user_id = $user->id;
+            $comment->save();
+        } else {
+            Session::flash('comment_unauth_user', 'Вы не авторизованы');
+        }
 
-
-        $user = new User;
-
-        $user->name = \Str::random(32, 'alpha');
-        $user->email = \Str::random(32, 'alpha') . '@mail.ru';
-        $user->password = 'qwerty';
-        $user->save();
-
-        $comment = new Comment;
-        $comment->text = \Str::random(32, 'alpha');
-        $comment->article_id = 1;
-        $comment->user_id = 1;
-        $comment->save();
+        return redirect(url('articles/view', ['id' => $param['articleId']]));
     }
 }

@@ -7,4 +7,13 @@
         <a href="/articles/view/{{$article->id}}">{{$article->name}}</a><br/>
     @endforeach
 </div>
+    <div class="currentUser">
+        <span>Пользователь: </span>
+        @auth
+            <span>{{$currentUser->name}}</span><br/>
+            <span>{{$currentUser->email}}</span>
+        @else
+            <span>Вы не авторизованы</span>
+        @endauth
+    </div>
 @endsection

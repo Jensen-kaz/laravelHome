@@ -6,6 +6,7 @@ use App\Models\Article;
 use App\Models\Comment;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 
 class ArticlesController extends Controller
@@ -17,16 +18,15 @@ class ArticlesController extends Controller
 //            $buttonNames[] = $value->name;
 //        }
         $title = 'Статьи';
-
-        //$articlesOut = ['articles' => $articles, 'title' => $title];
-        return view('articles.index')->withTitle($title)->withArticles($articles);
+        $authUser = Auth::user();
+        return view('articles.index')->withTitle($title)->withArticles($articles)->withCurrentUser($authUser);
     }
 
     public function view($id) {
         $article = Article::find($id);
-      // dump($article->comments[0]->author->name);
+        $authUser = Auth::user();
         $title = 'Комментарии';
-        return view('articles.view')->withArticle($article)->withTitleComment($title);
+        return view('articles.view')->withArticle($article)->withTitleComment($title)->withCurrentUser($authUser);
     }
 }
 

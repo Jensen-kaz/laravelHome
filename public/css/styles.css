@@ -9,3 +9,8 @@
 .inner {
     padding: 20px;
 }
+
+.currentUser {
+    display: flex;
+    flex-direction: column;
+}
