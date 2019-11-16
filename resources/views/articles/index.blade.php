@@ -4,7 +4,9 @@
     <h1 class="title">{{$title}}</h1>
 <div class="list-articles">
     @foreach($articles as $article)
-        <a href="/articles/view/{{$article->id}}">{{$article->name}}</a><br/>
+        <div style="padding: 5px;">
+            <a style="font-size: 17px; font-weight: bold;" href="/articles/view/{{$article->id}}">{{$article->name}}</a>
+        </div><br/>
     @endforeach
 </div>
     <div class="currentUser">
