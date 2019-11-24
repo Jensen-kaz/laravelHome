@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1cb41350-1f35-4399-9e54-9e2a0af9527e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/articles/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,15 +110,16 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Library/Services" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="H:\Develop\OSPanel\domains\laravelHome" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\Develop\OSPanel\domains\laravelHome\app\models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\Develop\OSPanel\domains\laravelHome\app\Library\Services" />
+      <recent name="H:\Develop\OSPanel\domains\laravelHome" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -155,6 +156,9 @@
       <workItem from="1573832320989" duration="8240000" />
       <workItem from="1573878166351" duration="9554000" />
       <workItem from="1573888243401" duration="274000" />
+      <workItem from="1574264410728" duration="1552000" />
+      <workItem from="1574361135297" duration="15000" />
+      <workItem from="1574484628430" duration="9597000" />
     </task>
     <servers />
   </component>
@@ -173,5 +177,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php</url>
+          <line>2</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
