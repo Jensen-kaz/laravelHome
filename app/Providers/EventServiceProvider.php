@@ -14,9 +14,23 @@ class EventServiceProvider extends ServiceProvider
      *
      * @var array
      */
+
+    protected $subscribe = [
+        'App\Listeners\ExampleEventSubscriber',
+    ];
+
     protected $listen = [
         Registered::class => [
             SendEmailVerificationNotification::class,
+        ],
+        'App\Events\OrderShipped' => [
+            'App\Listeners\SendShipmentNotification',
+        ],
+        'Illuminate\Auth\Events\Login' => [
+            'App\Listeners\SendEmailNotification',
+        ],
+        'App\Events\ClearCache' => [
+            'App\Listeners\WarmUpCache',
         ],
     ];
 
