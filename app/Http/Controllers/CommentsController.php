@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\SendEmail;
 use App\Models\Comment;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -35,6 +36,8 @@ class CommentsController extends Controller
             $comment->article_id = $param['articleId'];
             $comment->user_id = $user->id;
             $comment->save();
+
+            event(new SendEmail($comment));
         } else {
             Session::flash('comment_unauth_user', 'Вы не авторизованы');
         }

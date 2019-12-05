@@ -16,7 +16,7 @@ Route::get('/', function () {
 })->name('welcome');
 
 Route::get('/articles', 'ArticlesController@index')->name('articles');
-Route::get('/articles/view/{id}', 'ArticlesController@view');
+Route::get('/articles/view/{id}', 'ArticlesController@view')->name('article-view');
 Route::get('/comments', 'CommentsController@index');
 //Route::get('/auth/state', 'AuthStateController@state');
 //Route::get('/register', 'AuthController@register');

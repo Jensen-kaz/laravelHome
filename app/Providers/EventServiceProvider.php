@@ -26,11 +26,14 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\OrderShipped' => [
             'App\Listeners\SendShipmentNotification',
         ],
-        'Illuminate\Auth\Events\Login' => [
-            'App\Listeners\SendEmailNotification',
-        ],
-        'App\Events\ClearCache' => [
-            'App\Listeners\WarmUpCache',
+//        'Illuminate\Auth\Events\Login' => [
+//            'App\Listeners\SendEmailNotification',
+//        ],
+//        'App\Events\ClearCache' => [
+//            'App\Listeners\WarmUpCache',
+//        ],
+        'App\Events\SendEmail' => [
+            'App\Listeners\SendEmailAdmin',
         ],
     ];
 

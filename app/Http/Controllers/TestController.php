@@ -253,6 +253,6 @@ class TestController extends Controller
 
     public function register(Request $request)
     {
-        ProcessSendingEmail::dispatch($user);
+      //  ProcessSendingEmail::dispatch($user);
     }
 }

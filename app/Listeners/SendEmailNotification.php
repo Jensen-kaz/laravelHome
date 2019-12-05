@@ -26,9 +26,9 @@ class SendEmailNotification
      */
     public function handle(Login $event)
     {
-        $email = $event->user->email;
-        $username = $event->user->name;
-        dd($email);
+//        $email = $event->user->email;
+//        $username = $event->user->name;
+//        dd($email);
 
         // send email notification about login
     }
