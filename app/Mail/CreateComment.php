@@ -2,7 +2,6 @@
 
 namespace App\Mail;
 
-use App\Models\Comment;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -18,11 +17,11 @@ class CreateComment extends Mailable
      * @return void
      */
 
-    private $comment;
+    private $mailData;
 
-    public function __construct(Comment $comment)
+    public function __construct($mailData)
     {
-        $this->comment = $comment;
+        $this->mailData = $mailData;
     }
 
     /**
@@ -34,9 +33,9 @@ class CreateComment extends Mailable
     {
         return $this->from('laravelhome@example.com')->view('emails.admin.comment-create')
             ->with([
-                'commentText' => $this->comment->text,
-                'userId' => $this->comment->user_id,
-                'articleId' => $this->comment->article_id,
+                'commentText' => $this->mailData['commentText'],
+                'userId' => $this->mailData['userId'],
+                'articleId' => $this->mailData['articleId'],
             ]);
     }
 }

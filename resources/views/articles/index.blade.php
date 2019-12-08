@@ -1,13 +1,15 @@
 @extends('layouts/app')
 
 @section('content')
-    <h1 class="title">{{$title}}</h1>
-<div class="list-articles">
+    <h1 class="article_list__title">{{$title}}</h1>
+<div class="article_list__list-articles">
+    <div class="article_list__list-articles--inner">
     @foreach($articles as $article)
-        <div style="padding: 5px;">
-            <a style="font-size: 17px; font-weight: bold;" href="/articles/view/{{$article->id}}">{{$article->name}}</a>
+        <div class="article_list__item">
+            <a class="btn_articles" href="/articles/view/{{$article->id}}">{{$article->name}}</a>
         </div><br/>
     @endforeach
+    </div>
 </div>
     <div class="currentUser">
         <span>Пользователь: </span>

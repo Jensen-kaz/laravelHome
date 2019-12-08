@@ -21,7 +21,7 @@ Route::get('/comments', 'CommentsController@index');
 //Route::get('/auth/state', 'AuthStateController@state');
 //Route::get('/register', 'AuthController@register');
 //Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
-Route::post('/comments/create', 'CommentsController@create')->name('comment-add');
+Route::post('/comments/create', 'CommentsController@create')->name('comment-add')->middleware('checkAuth');
 
 Auth::routes();
 

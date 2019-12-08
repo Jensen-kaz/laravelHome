@@ -29,7 +29,6 @@ class CommentsController extends Controller
     public function create(Request $request) {
 
         $param = $request->all();
-        if (Auth::check()) {
             $user = Auth::user();
             $comment = new Comment;
             $comment->text = $param['commentText'];
@@ -38,9 +37,6 @@ class CommentsController extends Controller
             $comment->save();
 
             event(new SendEmail($comment));
-        } else {
-            Session::flash('comment_unauth_user', 'Вы не авторизованы');
-        }
 
         return redirect(url('articles/view', ['id' => $param['articleId']]));
     }

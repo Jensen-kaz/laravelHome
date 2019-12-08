@@ -4,6 +4,8 @@ namespace App\Console\Commands;
 
 use App\Models\Article;
 use Illuminate\Console\Command;
+use App\Library\Services\GenerateXmlFile;
+use Illuminate\Support\Carbon;
 
 class GenerateXmlArticle extends Command
 {
@@ -21,6 +23,8 @@ class GenerateXmlArticle extends Command
      */
     protected $description = 'Command description';
 
+    private $xmlGenerator;
+
     /**
      * Create a new command instance.
      *
@@ -36,14 +40,22 @@ class GenerateXmlArticle extends Command
      *
      * @return mixed
      */
-    public function handle()
+    public function handle(GenerateXmlFile $xmlGenerator)
     {
         $artcles = Article::all();
         $urlsXml = [];
 
         foreach ($artcles as $article) {
-            $urlsXml[] = route('article-view', [$article->id]);
+            $urlsXml[] = "
+                <url>
+                    <loc>" . route('article-view', [$article->id]) . "</loc>
+                    <lastmod>" . Carbon::today()->format('M d Y') . "</lastmod>
+                    <priority>0.2</priority>
+                    <changefreq>weekly</changefreq>
+                </url>";
             echo route('article-view', [$article->id]) . "\n";
         }
+
+        $xmlGenerator->generateXml('articlesSitemap', $urlsXml);
     }
 }

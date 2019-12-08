@@ -4,7 +4,6 @@ namespace App\Events;
 
 use App\Models\Comment;
 use Illuminate\Broadcasting\Channel;
-use Illuminate\Http\Request;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Broadcasting\PresenceChannel;
@@ -17,6 +16,7 @@ class SendEmail
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
     public $comment;
+    public $user;
 
     /**
      * Create a new event instance.

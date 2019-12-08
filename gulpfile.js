@@ -1,7 +1,8 @@
 var gulp = require('gulp'),
-    sass = require('gulp-sass'),
     concat = require('gulp-concat'),
-    uglify = require('gulp-uglify');
+    babel = require('gulp-babel'),
+    uglify = require('gulp-uglify-es').default,
+    uglifycss = require('gulp-uglify');
 
 
 var srs = {
@@ -9,28 +10,38 @@ var srs = {
     build: {
         js: {
             path: 'public/js/',
-            index: 'app.min.js'
+            index: 'app.min.js',
         },
         css: {
             path: 'public/css/',
+            index: 'app.min.css',
         },
     },
     js: {
         scripts: [
-            'resources/js/*.js',
+            'resources/js/main.js',
+            'resources/js/libs/toastr.js',
+        ]
+    },
+    css: {
+        scripts: [
+            'resources/css/*.css',
+            //'resources/js/libs/toastr/nuget/content/content/toastr.min.css',
         ]
     },
 };
 
-gulp.task('sass', function(){
-    return gulp.src(srs.sass)
-        .pipe(sass())
-        .pipe(gulp.dest(srs.build.css.path))
-});
 
 gulp.task('js:scripts', function(){
-    return gulp.src(srs.js.scripts)
+    return gulp.src(srs.js.scripts, { allowEmpty: true })
         .pipe(concat(srs.build.js.index))
         .pipe(uglify())
         .pipe(gulp.dest(srs.build.js.path));
+});
+
+gulp.task('css:scripts', function(){
+    return gulp.src(srs.css.scripts)
+        .pipe(concat(srs.build.css.index))
+        .pipe(uglifycss())
+        .pipe(gulp.dest(srs.build.css.path));
 });

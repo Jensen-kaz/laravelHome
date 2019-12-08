@@ -3,10 +3,11 @@
 namespace App\Listeners;
 
 use App\Events\SendEmail;
+use App\Jobs\SendingEmail;
 use App\Mail\CreateComment;
+
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Request;
 
 class SendEmailAdmin
@@ -29,10 +30,14 @@ class SendEmailAdmin
      */
     public function handle(SendEmail $event)
     {
-        $comment = $event->comment;
+        $mailData =[
+            'commentText' => $event->comment->text,
+            'userId' => $event->comment->user_id,
+            'articleId' => $event->comment->article_id,
+        ];
+        $user = Request::user();
 
-
-        $email = (new CreateComment($comment))->onQueue('emails');
-        Mail::to(Request::user())->queue($email);
+        $job = (new SendingEmail($mailData, $user))->onQueue('emails');
+        dispatch($job);
     }
 }
