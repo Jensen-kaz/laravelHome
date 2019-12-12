@@ -32,6 +32,7 @@
         "gulp-concat": "^2.6.1",
         "gulp-uglify": "^3.0.2",
         "gulp-uglify-es": "^2.0.0",
+        "gulp-uglifycss": "^1.1.0",
         "toastr": "^2.1.4",
         "uglify-js": "github:mishoo/UglifyJS2#harmony"
     }

@@ -4,6 +4,26 @@ body {
 
 .article_list__title {
     text-align: center;
+    margin-top: 20px;
+}
+
+.article_title {
+    display: block;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    padding: 30px 20px 20px 20px;
+}
+
+.footer {
+    display: block;
+    margin-top: 40px;
+    padding-left: 20px;
+    font-weight: 600;
+    background: #f3f3f3;
+    border-top: 1px solid #e2e2e2;
+    padding-top: 15px;
+    height: 70px;
 }
 
 .article_list__list-articles{
@@ -46,6 +66,8 @@ body {
     display: flex;
     flex-direction: column;
     margin-left: 10px;
+    background: #f3f3f3;
+    border-top: 1px solid #e2e2e2;
 }
 
 .currentUser_info {
@@ -161,4 +183,55 @@ body {
     padding: 0 20px;
     width: 800px;
     margin: 0 auto;
+}
+
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
 }

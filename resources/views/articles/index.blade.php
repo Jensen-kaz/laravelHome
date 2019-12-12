@@ -1,7 +1,16 @@
 @extends('layouts/app')
 
 @section('content')
-    <h1 class="article_list__title">{{$title}}</h1>
+<div class="currentUser">
+    <span class="currentUser_info">Пользователь: </span>
+    @auth
+        <span>{{$currentUser->name}}</span><br/>
+        <span>{{$currentUser->email}}</span>
+    @else
+        <span>Вы не авторизованы</span>
+    @endauth
+</div>
+<h1 class="article_list__title">{{$title}}</h1>
 <div class="article_list__list-articles">
     <div class="article_list__list-articles--inner">
     @foreach($articles as $article)
@@ -11,13 +20,4 @@
     @endforeach
     </div>
 </div>
-    <div class="currentUser">
-        <span>Пользователь: </span>
-        @auth
-            <span>{{$currentUser->name}}</span><br/>
-            <span>{{$currentUser->email}}</span>
-        @else
-            <span>Вы не авторизованы</span>
-        @endauth
-    </div>
 @endsection

@@ -2,7 +2,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     babel = require('gulp-babel'),
     uglify = require('gulp-uglify-es').default,
-    uglifycss = require('gulp-uglify');
+    uglifycss = require('gulp-uglifycss');
 
 
 var srs = {
@@ -26,7 +26,7 @@ var srs = {
     css: {
         scripts: [
             'resources/css/*.css',
-            //'resources/js/libs/toastr/nuget/content/content/toastr.min.css',
+            'resources/js/libs/toastr/nuget/content/content/toastr.min.css',
         ]
     },
 };
