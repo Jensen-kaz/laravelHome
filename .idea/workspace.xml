@@ -3,22 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1cb41350-1f35-4399-9e54-9e2a0af9527e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/GenerateXmlArticle.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/GenerateXmlArticle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Events/SendEmail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Events/SendEmail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/SendEmailAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/SendEmailAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Mail/CreateComment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mail/CreateComment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/articles/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/articles/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -132,7 +120,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/libs/toastr/nuget" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../100qiwi-docker" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -144,11 +132,11 @@
       <recent name="H:\Develop\OSPanel\domains\laravelHome" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="H:\Develop\OSPanel\domains\laravelHome\public" />
-      <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\images" />
-      <recent name="H:\Develop\OSPanel\domains\laravelHome\public\css" />
+      <recent name="H:\Develop\OSPanel\domains\laravelHome\app\Models" />
+      <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\views\layouts\blocks" />
+      <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\views\layouts" />
       <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\css" />
-      <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\js" />
+      <recent name="H:\Develop\OSPanel\domains\laravelHome\public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -194,8 +182,19 @@
       <workItem from="1575562239918" duration="8512000" />
       <workItem from="1575648601560" duration="3997000" />
       <workItem from="1575732606206" duration="12463000" />
-      <workItem from="1575817384730" duration="6877000" />
+      <workItem from="1575817384730" duration="7002000" />
+      <workItem from="1575993348730" duration="284000" />
+      <workItem from="1576172232328" duration="5461000" />
+      <workItem from="1576773404736" duration="6220000" />
     </task>
+    <task id="LOCAL-00001" summary="* Правки въюх.">
+      <created>1576177610480</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576177610481</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,6 +212,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="* Правки въюх." />
+    <option name="LAST_COMMIT_MESSAGE" value="* Правки въюх." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

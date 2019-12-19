@@ -23,6 +23,12 @@ Route::get('/comments', 'CommentsController@index');
 //Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::post('/comments/create', 'CommentsController@create')->name('comment-add')->middleware('checkAuth');
 
+Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth']], function() {
+    Route::get('/', 'AdminController@index')->name('admin-index');
+});
+
+
+
 Auth::routes();
 
 // для избежания ошибки post при logout

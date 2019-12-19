@@ -26,7 +26,7 @@ var srs = {
     css: {
         scripts: [
             'resources/css/*.css',
-            'resources/js/libs/toastr/nuget/content/content/toastr.min.css',
+            'resources/js/libs/toastr/nuget/content/toastr.min.css',
         ]
     },
 };
