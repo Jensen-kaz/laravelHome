@@ -1,16 +1,17 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Gate;
 
-class AdminController extends Controller
+class IndexController extends Controller
 {
     public function index() {
 
         if (Gate::denies('access-admin')) {
-            return redirect()->back()->with(['message' => 'У вас нет прав']);
+            return redirect()->back();
         }
 
         return view('admin.index');

@@ -23,9 +23,9 @@ body {
     background: #f3f3f3;
     border-top: 1px solid #e2e2e2;
     padding-top: 15px;
-    height: 70px;
-    position: absolute;
+    height: 53px;
     bottom: 0;
+    position: absolute;
     width: 100%;
 }
 
@@ -69,8 +69,6 @@ padding: 20px;
 display: flex;
 flex-direction: column;
 margin-left: 10px;
-background: #f3f3f3;
-border-top: 1px solid #e2e2e2;
 }
 
 .currentUser_info {
@@ -212,9 +210,10 @@ position: relative;
 }
 
 .top-right {
-position: absolute;
-right: 10px;
-top: 18px;
+padding-top: 10px;
+padding-bottom: 10px;
+background: #f3f3f3;
+border-top: 1px solid #e2e2e2;
 }
 
 .content {
@@ -237,4 +236,45 @@ text-transform: uppercase;
 
 .m-b-md {
 margin-bottom: 30px;
+}
+
+.admin__title {
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.admin_list__list-sections {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin_list__list-sections--inner {
+    width: 50%;
+}
+
+.admin_list__list__section {
+    border: 1px solid #cce3f6;
+    padding: 10px 0;
+}
+
+.admin_list__list__section:hover {
+    background: #98dfb6;
+}
+
+.btn_section {
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+}
+
+.admin-article__title {
+    padding-top: 15px;
+    padding-left: 15px;
 }

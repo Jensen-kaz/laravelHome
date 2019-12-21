@@ -11,4 +11,8 @@ class User extends Authenticatable
     protected $table = 'users';
     protected $fillable = ['name', 'email', 'password'];
 
+    public function roles() {
+        return $this->belongsToMany('App\Models\Role', 'role_users', 'user_id', 'role_id');
+    }
+
 }

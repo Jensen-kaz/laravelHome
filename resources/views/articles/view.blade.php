@@ -1,15 +1,28 @@
 @extends('layouts/app')
 
 @section('content')
-    <div class="currentUser">
-        <span class="currentUser_info">Пользователь: </span>
+<div class="top-right links">
+    @auth
+        @foreach($currentUser->roles as $role)
+            @if ($role->name == 'admin')
+                <a href="{{route('admin-index')}}">Админка</a>
+            @endif
+        @endforeach
+    @endauth
+
+    @if (Route::has('login'))
         @auth
-            <span>{{$currentUser->name}}</span>
-            <span>{{$currentUser->email}}</span>
+            <a href="{{ route('articles') }}">Home</a>
+            <a href="{{ route('logout') }}">Logout</a>
         @else
-            <span>Вы не авторизованы</span>
+            <a href="{{ route('login') }}">Login</a>
+
+            @if (Route::has('register'))
+                <a href="{{ route('register') }}">Register</a>
+            @endif
         @endauth
-    </div>
+    @endif
+</div>
 <div class="article-content">
     <div class="article_title">
         {{$article->name}}

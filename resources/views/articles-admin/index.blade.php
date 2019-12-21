@@ -24,15 +24,31 @@
         @endif
     </div>
 
-    <div class="admin__title">
-        <h1>Админка</h1>
-    </div>
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-9">
+                <h1>Статьи</h1>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="{{url('/admin')}}">Главная</a>
+                </li>
+                <li class="active">
+                    <strong>Статьи</strong>
+                </li>
+            </ol>
+        </div>
+        <div class="col-lg-3">
+            <div class="title-action">
 
-    <div class="admin_list__list-sections">
-        <div class="admin_list__list-sections--inner">
-            <div class="admin_list__list__section">
-                <a class="btn_section" href="{{url('admin/articles')}}">Статьи</a>
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="wrapper wrapper-content">
+                {!! $grid !!}
+            </div>
+        </div>
+    </div>
+
+{{--    @include('vendor.admin-grid.grid')--}}
 @endsection
