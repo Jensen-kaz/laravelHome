@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1cb41350-1f35-4399-9e54-9e2a0af9527e" name="Default Changelist" comment="">
+    <list default="true" id="1cb41350-1f35-4399-9e54-9e2a0af9527e" name="Default Changelist" comment="* Правки въюх.">
+      <change beforePath="$PROJECT_DIR$/.idea/laravelHome.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravelHome.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesAdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesAdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -113,6 +113,12 @@
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
       <path value="$PROJECT_DIR$/vendor/predis/predis" />
+      <path value="$PROJECT_DIR$/vendor/estaticzz/admin-grid" />
+      <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
+      <path value="$PROJECT_DIR$/vendor/nayjest/builder" />
+      <path value="$PROJECT_DIR$/vendor/nayjest/str-case-converter" />
+      <path value="$PROJECT_DIR$/vendor/nayjest/grids" />
+      <path value="$PROJECT_DIR$/vendor/nayjest/manipulator" />
     </include_path>
   </component>
   <component name="ProjectId" id="1TZIwXzRccYkU8voB53K8NlZi18" />
@@ -120,23 +126,23 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../100qiwi-docker" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Services/Grid" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\js\libs\toastr\nuget" />
-      <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\js\libs\toastr\nuget\content\content" />
-      <recent name="H:\Develop\OSPanel\domains\laravelHome\libs" />
-      <recent name="H:\Develop\OSPanel\domains\laravelHome\app\Library\Services" />
-      <recent name="H:\Develop\OSPanel\domains\laravelHome" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="H:\Develop\OSPanel\domains\laravelHome\app\Models" />
-      <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\views\layouts\blocks" />
-      <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\views\layouts" />
-      <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\css" />
       <recent name="H:\Develop\OSPanel\domains\laravelHome\public" />
+      <recent name="H:\Develop\OSPanel\domains\laravelHome\public\css" />
+      <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\views\articles-admin" />
+      <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\views" />
+      <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\views\vendor" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\Develop\OSPanel\domains\laravelHome\app\Services\Grid" />
+      <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\css" />
+      <recent name="H:\Develop\OSPanel\domains\laravelHome\resources" />
+      <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\views\vendor" />
+      <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\js\libs\toastr\nuget" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -185,7 +191,12 @@
       <workItem from="1575817384730" duration="7002000" />
       <workItem from="1575993348730" duration="284000" />
       <workItem from="1576172232328" duration="5461000" />
-      <workItem from="1576773404736" duration="6220000" />
+      <workItem from="1576773404736" duration="6343000" />
+      <workItem from="1576848849416" duration="7027000" />
+      <workItem from="1576916145052" duration="17523000" />
+      <workItem from="1577107809157" duration="1056000" />
+      <workItem from="1577293993618" duration="22000" />
+      <workItem from="1577464417640" duration="6942000" />
     </task>
     <task id="LOCAL-00001" summary="* Правки въюх.">
       <created>1576177610480</created>
@@ -194,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576177610481</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="* Добавил админку.">
+      <created>1576935999682</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576935999682</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +233,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="* Правки въюх." />
-    <option name="LAST_COMMIT_MESSAGE" value="* Правки въюх." />
+    <MESSAGE value="* Добавил админку." />
+    <option name="LAST_COMMIT_MESSAGE" value="* Добавил админку." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -89,6 +89,12 @@
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
       <path value="$PROJECT_DIR$/vendor/predis/predis" />
+      <path value="$PROJECT_DIR$/vendor/estaticzz/admin-grid" />
+      <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
+      <path value="$PROJECT_DIR$/vendor/nayjest/builder" />
+      <path value="$PROJECT_DIR$/vendor/nayjest/str-case-converter" />
+      <path value="$PROJECT_DIR$/vendor/nayjest/grids" />
+      <path value="$PROJECT_DIR$/vendor/nayjest/manipulator" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

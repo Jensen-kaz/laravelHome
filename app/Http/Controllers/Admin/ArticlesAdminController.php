@@ -4,58 +4,44 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Extensions\Grid\Grid;
+use App\Services\Grid\ColumnMakerAbstract;
+use App\Services\Grid\ColumnMakers\Articles;
 use App\Models\Article;
-use HTML;
-use Nayjest\Grids\EloquentDataProvider;
-use Nayjest\Grids\FieldConfig;
-use Nayjest\Grids\FilterConfig;
-use Nayjest\Grids\Grid;
-use Nayjest\Grids\GridConfig;
+//use HTML;
+//use Nayjest\Grids\EloquentDataProvider;
+//use Nayjest\Grids\FieldConfig;
+//use Nayjest\Grids\FilterConfig;
+//use Nayjest\Grids\Grid;
+//use Nayjest\Grids\GridConfig;
 
 
 class ArticlesAdminController extends Controller
 {
+
+    protected $columnMaker = Articles::class;
+
     public function index() {
-        $grid = new Grid(
-            (new GridConfig)
-                ->setDataProvider(
-                    new EloquentDataProvider(Article::query())
-                )
-                ->setName('example_grid4')
-                ->setPageSize(15)
-                ->setColumns([
-                    (new FieldConfig)
-                        ->setName('id')
-                        ->setLabel('ID')
-                        ->setSortable(true)
-                        ->setSorting(Grid::SORT_ASC)
-                    ,
-                    (new FieldConfig)
-                        ->setName('name')
-                        ->setLabel('Name')
-                        ->addFilter(
-                            (new FilterConfig)
-                                ->setOperator(FilterConfig::OPERATOR_LIKE)
-                        )
-                    ,
-                    (new FieldConfig)
-                        ->setName('title')
-                        ->setLabel('Title')
-                        ->setSortable(true)
-                        ->setCallback(function ($val) {
-                            return
-                                '<small>'
-                                . HTML::link("$val", $val)
-                                . '</small>';
-                        })
-                        ->addFilter(
-                            (new FilterConfig)
-                                ->setOperator(FilterConfig::OPERATOR_LIKE)
-                        )
-                    ,
-                ])
-        );
+
+        $article = new Article();
+        $grid = $this->makeGrid($article);
         $grid = $grid->render();
         return view('articles-admin.index', compact('grid'));
     }
+
+    protected function makeGrid($model)
+    {
+        $columns = $this->getColumns();
+        $grid = new Grid($model, $columns);
+        return $grid;
+    }
+
+    protected function getColumns()
+    {
+        $columnMaker = $this->columnMaker;
+        $columnMaker = new $columnMaker();
+        $colArr = $columnMaker->getColumnParams();
+        return $columnMaker->makeColumns($colArr);
+    }
+
 }
