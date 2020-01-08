@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Library\Services\Grid\ColumnMakers\Articles;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Extensions\Grid\Grid;
-use App\Services\Grid\ColumnMakerAbstract;
-use App\Services\Grid\ColumnMakers\Articles;
+use App\Library\Services\Grid\ColumnMakerAbstract;
 use App\Models\Article;
 //use HTML;
 //use Nayjest\Grids\EloquentDataProvider;
@@ -19,7 +19,6 @@ use App\Models\Article;
 class ArticlesAdminController extends Controller
 {
 
-    protected $columnMaker = Articles::class;
 
     public function index() {
 
@@ -29,17 +28,27 @@ class ArticlesAdminController extends Controller
         return view('articles-admin.index', compact('grid'));
     }
 
+    public function remove($id) {
+        $article = new Article();
+        $article->remove($id);
+        return redirect()->back();
+    }
+
+    public function edit($id) {
+        $article = Article::find($id);
+        return view('articles-admin.edit')->with('article', $article);
+    }
+
     protected function makeGrid($model)
     {
-        $columns = $this->getColumns();
+        $columnMaker = new Articles();
+        $columns = $this->getColumns($columnMaker);
         $grid = new Grid($model, $columns);
         return $grid;
     }
 
-    protected function getColumns()
+    protected function getColumns(ColumnMakerAbstract $columnMaker)
     {
-        $columnMaker = $this->columnMaker;
-        $columnMaker = new $columnMaker();
         $colArr = $columnMaker->getColumnParams();
         return $columnMaker->makeColumns($colArr);
     }

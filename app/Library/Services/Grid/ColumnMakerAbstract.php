@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Grid;
+namespace App\Library\Services\Grid;
 
 
 use Estaticzz\AdminGrid\Column;
@@ -47,5 +47,5 @@ abstract class ColumnMakerAbstract
     }
 
 
-    abstract protected function getColumnParams();
+    abstract public function getColumnParams();
 }

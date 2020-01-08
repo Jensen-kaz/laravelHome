@@ -179,6 +179,7 @@ return [
         \Estaticzz\AdminGrid\ServiceProvider::class,
         Nayjest\Grids\ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        App\Providers\ColumnMakerProvider::class,
     ],
 
     /*

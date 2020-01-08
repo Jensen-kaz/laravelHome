@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome/welcome');
 })->name('welcome');
 
 Route::get('/articles', 'ArticlesController@index')->name('articles');

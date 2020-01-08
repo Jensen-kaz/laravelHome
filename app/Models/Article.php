@@ -8,8 +8,12 @@ class Article extends Model
 {
     public $timestamps = false;
 
-    public function comments()
-    {
+    public function comments() {
         return $this->hasMany('App\Models\Comment', 'article_id');
+    }
+
+    public function remove($id) {
+        $article = Article::find($id);
+        $article->delete();
     }
 }

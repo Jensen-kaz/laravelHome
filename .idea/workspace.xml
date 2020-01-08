@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1cb41350-1f35-4399-9e54-9e2a0af9527e" name="Default Changelist" comment="* Правки въюх.">
-      <change beforePath="$PROJECT_DIR$/.idea/laravelHome.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravelHome.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesAdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesAdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Grid/ColumnMakerAbstract.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Library/Services/Grid/ColumnMakerAbstract.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Grid/ColumnMakers/Articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Library/Services/Grid/ColumnMakers/Articles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/bootstrap.min(self).css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/articles-admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles-admin/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -126,23 +134,23 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Services/Grid" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/js" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="H:\Develop\OSPanel\domains\laravelHome\public" />
-      <recent name="H:\Develop\OSPanel\domains\laravelHome\public\css" />
-      <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\views\articles-admin" />
-      <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\views" />
-      <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\views\vendor" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\Develop\OSPanel\domains\laravelHome\public\js" />
+      <recent name="H:\Develop\OSPanel\domains\laravelHome\public\css" />
       <recent name="H:\Develop\OSPanel\domains\laravelHome\app\Services\Grid" />
       <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\css" />
       <recent name="H:\Develop\OSPanel\domains\laravelHome\resources" />
-      <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\views\vendor" />
-      <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\js\libs\toastr\nuget" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\views\articles-admin" />
+      <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\views\admin\articles" />
+      <recent name="H:\Develop\OSPanel\domains\laravelHome\app\Library\Services" />
+      <recent name="H:\Develop\OSPanel\domains\laravelHome\resources\views\welcome" />
+      <recent name="H:\Develop\OSPanel\domains\laravelHome\public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -196,7 +204,10 @@
       <workItem from="1576916145052" duration="17523000" />
       <workItem from="1577107809157" duration="1056000" />
       <workItem from="1577293993618" duration="22000" />
-      <workItem from="1577464417640" duration="6942000" />
+      <workItem from="1577464417640" duration="7240000" />
+      <workItem from="1577599012549" duration="7625000" />
+      <workItem from="1577707444240" duration="10479000" />
+      <workItem from="1577763555725" duration="10018000" />
     </task>
     <task id="LOCAL-00001" summary="* Правки въюх.">
       <created>1576177610480</created>
