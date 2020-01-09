@@ -24,5 +24,21 @@
         @endif
     </div>
 
+    <div class="article-form-fields">
+        <form method="POST" action="{{route('admin-articles-save', ['id' => $article->id])}}">
+            {{csrf_field()}}
+            <label for="articleName">Название:</label>
+            <input id="articleName" type="text" name="articleName" value="{{$article->name}}">
+                <div class="article-form-text">
+                    <label for="articleText">Текст:</label>
+                    <textarea id="articleText" type="text" name="articleText">{{$article->text}}</textarea>
+                </div>
+                <div class="controls">
+                    <button class="button" type="submit">
+                        Сохранить
+                    </button>
+                </div>
+        </form>
+    </div>
 
 </div>

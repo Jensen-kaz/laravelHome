@@ -39,6 +39,16 @@ class ArticlesAdminController extends Controller
         return view('articles-admin.edit')->with('article', $article);
     }
 
+    public function save($id, Request $request) {
+        $article = Article::find($id);
+        $param = $request->all();
+        dd($param);
+        $article->text = $param['articleText'];
+        $article->name = $param['articleName'];
+        $article->save();
+        return route('articles-admin.index');
+    }
+
     protected function makeGrid($model)
     {
         $columnMaker = new Articles();

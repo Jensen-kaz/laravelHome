@@ -99,6 +99,33 @@ width: 440px;
 resize: none;
 }
 
+.article-form-fields {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.article-form-fields label {
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.article-form-fields textarea {
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 11px 11px;
+    color: #666;
+    border-radius: 2px;
+    background-image: linear-gradient(to bottom,#f4f4f4 0,#fff 10%,#fff 100%);
+    width: 440px;
+    resize: none;
+}
+
+.article-form-text {
+    padding-top: 30px;
+}
+
 .button {
 height: 30px;
 line-height: 30px;
